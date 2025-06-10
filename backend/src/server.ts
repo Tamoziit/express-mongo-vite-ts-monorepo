@@ -9,6 +9,8 @@ import morgan from "morgan";
 
 import connecToMongoDB from './db/connectToMongoDB';
 import client from './redis/client';
+import adminRoutes from './routes/admin.routes';
+import authRoutes from './routes/auth.routes';
 
 const PORT = process.env.PORT || 3000;
 
@@ -47,6 +49,9 @@ app.use(cookieParser());
 app.get('/api/v1', (req: Request, res: Response) => {
     res.send('Server Up & Running!');
 });
+
+app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/auth', authRoutes);
 
 app.listen(PORT, () => {
     console.log(`🚀 Server is running on PORT: ${PORT}`);
