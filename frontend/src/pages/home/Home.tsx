@@ -1,6 +1,10 @@
+import AppNavbar from "../../components/navbars/AppNavbar";
+
 const Home = () => {
 	return (
-		<div>Home</div>
+		<>
+			<AppNavbar />
+		</>
 	)
 }
 

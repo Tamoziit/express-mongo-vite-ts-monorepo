@@ -71,7 +71,7 @@ const LandingNavbar = () => {
 			{/* Desktop Navigation */}
 			<div className="hidden lg:flex gap-6 z-20">
 				{items.map((item, _idx) => (
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-2" key={_idx}>
 						<span>{item.icon}</span>
 						<a
 							key={_idx}
