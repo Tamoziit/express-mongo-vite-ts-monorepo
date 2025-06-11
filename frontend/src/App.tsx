@@ -9,7 +9,7 @@ import Home from "./pages/home/Home";
 function App() {
 	return (
 		<>
-			<div className="min-h-screen bg-gradient-to-br from-slate-900 to-black">
+			<div className="min-h-screen bg-gradient-to-br from-slate-800 to-black">
 
 				<Routes>
 					<Route path="/" element={<Landing />} />

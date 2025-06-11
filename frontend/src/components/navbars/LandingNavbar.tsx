@@ -86,7 +86,7 @@ const LandingNavbar = () => {
 
 			{/* Mobile Navigation */}
 			{isMenuOpen && (
-				<div className="absolute top-full right-0 w-full p-3 lg:hidden bg-white/5 backdrop-blur-xl shadow-md border border-white/20 z-10">
+				<div className="absolute top-full right-0 w-full p-3 lg:hidden bg-white/5 backdrop-blur-2xl shadow-md border border-white/20 z-20">
 					<ul className="flex flex-col items-center space-y-4 py-4 z-20">
 						{items.map((item, _idx) => (
 							<li key={_idx} className="flex items-center gap-2">
