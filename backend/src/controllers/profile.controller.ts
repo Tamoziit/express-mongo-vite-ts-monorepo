@@ -16,6 +16,7 @@ export const updateProfile = async (req: Request, res: Response) => {
                 email: user.email,
                 mobileNo: user.mobileNo,
                 gender: user.gender,
+                profilePic: user.profilePic,
                 token: req.headers.authorization?.split(" ")[1]
             });
         } else {
