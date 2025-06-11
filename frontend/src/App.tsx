@@ -6,6 +6,7 @@ import Signup from "./pages/auth/Signup";
 import Login from "./pages/auth/Login";
 import Home from "./pages/home/Home";
 import { useAuthContext } from "./context/AuthContext";
+import Profile from "./pages/profile/Profile";
 
 function App() {
 	const { authUser } = useAuthContext();
@@ -19,6 +20,7 @@ function App() {
 					<Route path="/login" element={authUser ? <Navigate to="/home" /> : <Login />} />
 					<Route path="/signup" element={authUser ? <Navigate to="/home" /> : <Signup />} />
 					<Route path="/home" element={authUser ? <Home /> : <Navigate to="/" />} />
+					<Route path="/profile" element={authUser ? <Profile /> : <Navigate to="/" />} />
 				</Routes>
 
 				<Toaster />

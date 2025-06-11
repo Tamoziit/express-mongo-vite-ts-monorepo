@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FaListAlt, FaPhoneAlt } from "react-icons/fa";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { FaHome, FaUserAlt } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import useLogout from "../../hooks/useLogout";
 
@@ -10,19 +9,14 @@ const AppNavbar = () => {
 
 	const items = [
 		{
-			name: "About",
-			icon: <FaListAlt />,
-			link: "#about",
+			name: "Home",
+			icon: <FaHome />,
+			link: "/home",
 		},
 		{
-			name: "Services",
-			icon: <VscWorkspaceTrusted />,
-			link: "#services",
-		},
-		{
-			name: "Contact",
-			icon: <FaPhoneAlt />,
-			link: "#contact",
+			name: "Profile",
+			icon: <FaUserAlt />,
+			link: "/profile",
 		}
 	];
 
