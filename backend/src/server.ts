@@ -29,10 +29,7 @@ const corsOpts = {
     allowHeaders: [
         'Content-Type',
         'Authorization',
-        'X-Requested-With',
-        'Accept',
-        'X-CSRF-Token',
-        'X-HTTP-Method-Override'
+        'Accept'
     ],
     credentials: true
 };
