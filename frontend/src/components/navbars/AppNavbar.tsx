@@ -67,7 +67,7 @@ const AppNavbar = () => {
 						<a
 							key={_idx}
 							href={item.link}
-							className="relative text-lg font-medium text-gray-300 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full"
+							className="relative text-lg font-medium text-gray-100 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full"
 						>
 							{item.name}
 						</a>
@@ -75,7 +75,7 @@ const AppNavbar = () => {
 				))}
 
 				<button
-					className="flex items-center gap-2 relative text-lg font-medium text-gray-300 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full cursor-pointer"
+					className="flex items-center gap-2 relative text-lg font-medium text-gray-100 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full cursor-pointer"
 					onClick={logout}
 					disabled={loading}
 				>
@@ -88,11 +88,11 @@ const AppNavbar = () => {
 				<div className="absolute top-full right-0 w-full p-3 lg:hidden bg-white/5 backdrop-blur-2xl shadow-md border border-white/20 z-20">
 					<ul className="flex flex-col items-center space-y-4 py-4 z-20">
 						{items.map((item, _idx) => (
-							<li key={_idx} className="flex items-center gap-2">
+							<li key={_idx} className="flex items-center gap-2 z-20">
 								<span>{item.icon}</span>
 								<a
 									href={item.link}
-									className="relative text-lg font-medium text-gray-300 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full"
+									className="relative text-lg font-medium text-gray-100 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full"
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{item.name}
@@ -101,7 +101,7 @@ const AppNavbar = () => {
 						))}
 
 						<button
-							className="flex items-center gap-2 relative text-lg font-medium text-gray-300 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full cursor-pointer"
+							className="flex items-center gap-2 relative text-lg font-medium text-gray-100 before:absolute before:bottom-0 before:left-0 before:h-[2.3px] before:w-0 before:bg-blue-300 before:transition-all before:duration-300 hover:before:w-full cursor-pointer z-20"
 							onClick={logout}
 							disabled={loading}
 						>

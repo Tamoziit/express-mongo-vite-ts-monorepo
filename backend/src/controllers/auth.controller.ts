@@ -79,6 +79,7 @@ export const signup = async (req: Request, res: Response) => {
 					email: newUser.email,
 					mobileNo: newUser.mobileNo,
 					gender: newUser.gender,
+					profilePic: newUser.profilePic,
 					token
 				});
 		}
@@ -127,6 +128,7 @@ export const login = async (req: Request, res: Response) => {
 				email: user.email,
 				mobileNo: user.mobileNo,
 				gender: user.gender,
+				profilePic: user.profilePic,
 				token
 			});
 	} catch (error) {
