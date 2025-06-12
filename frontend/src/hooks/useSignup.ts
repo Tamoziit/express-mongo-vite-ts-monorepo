@@ -49,8 +49,13 @@ const useSignup = () => {
                 throw new Error(data.error);
             }
 
+            // Storing user data with expiry
+            const now = new Date().getTime();
+            const expiry = now + 30 * 24 * 60 * 60 * 1000; // 30 days
+
             localStorage.setItem("DB-token", data.token);
             localStorage.setItem("DB-user", JSON.stringify(data));
+            localStorage.setItem("DB-expiry", expiry.toString());
             setAuthUser(data);
 
             if (data) {

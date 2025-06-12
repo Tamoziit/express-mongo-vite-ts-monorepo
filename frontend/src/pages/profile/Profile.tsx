@@ -6,17 +6,19 @@ import { FaPen } from "react-icons/fa";
 
 const Profile = () => {
 	const { authUser } = useAuthContext();
-	const [profilePic, setProfilePic] = useState("");
+	const [profilePic, setProfilePic] = useState(authUser?.profilePic || "");
 	const [uploading, setUploading] = useState(false);
 	const fileInputRef = useRef(null);
 
 	const getProfilePic = () => {
-		const ProfilePic =
-			authUser?.gender === "M"
-				? `https://avatar.iran.liara.run/public/boy?username=${authUser?.fullName}`
-				: `https://avatar.iran.liara.run/public/girl?username=${authUser?.fullName}`;
+		if (!authUser?.profilePic) {
+			const ProfilePic =
+				authUser?.gender === "M"
+					? `https://avatar.iran.liara.run/public/boy?username=${authUser?.fullName}`
+					: `https://avatar.iran.liara.run/public/girl?username=${authUser?.fullName}`;
 
-		setProfilePic(ProfilePic);
+			setProfilePic(ProfilePic);
+		}
 	}
 
 	const handleProfilePicChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,11 +37,11 @@ const Profile = () => {
 		getProfilePic();
 	}, []);
 
-	if(profilePic == "") return (
-	<div className="flex w-full min-h-screen items-center justify-center z-0">
-		<Spinner size="large" />
-	</div>
-)
+	if (profilePic == "") return (
+		<div className="flex w-full min-h-screen items-center justify-center z-0">
+			<Spinner size="large" />
+		</div>
+	)
 
 	return (
 		<>
@@ -49,9 +51,9 @@ const Profile = () => {
 				<div className="glassmorphic-2 flex flex-col gap-2 items-center justify-center p-6 rounded-lg shadow-xl backdrop-blur-lg backdrop-filter mb-10 z-0">
 					<div className="flex items-center justify-center relative">
 						<img
-							src={authUser?.profilePic || profilePic}
+							src={profilePic}
 							alt={authUser?.username}
-							className="w-[220px] rounded-full object-cover border-2 border-gray-700"
+							className="w-[220px] rounded-full object-cover border-2 border-gray-300"
 						/>
 
 						<label

@@ -25,6 +25,7 @@ const useLogout = () => {
 
             localStorage.removeItem("DB-token");
             localStorage.removeItem("DB-user");
+            localStorage.removeItem("DB-expiry");
             setAuthUser(null);
 
             if (data) {
