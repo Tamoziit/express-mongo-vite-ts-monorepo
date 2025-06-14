@@ -1,9 +1,9 @@
 # Express, Mongo, Vite, TS Full-Stack Starter Project
 
-### *A zero-config starter CLI to scaffold a FullStack monorepo with:*
+### *A zero-config starter npm package to scaffold a FullStack monorepo with:*
 
 - ⚙️ **Backend**: Node.js + Express.js + MongoDB + TypeScript + JWT-Auth
-- ⚛️ **Frontend**: React.js + Vite + TypeScript
+- ⚛️ **Frontend**: React.js + Vite + TailwindCSS + TypeScript
 
 ---
 
@@ -13,7 +13,7 @@
 my-app/
 ├── backend/        # Express.js + MongoDB + TypeScript API for basic User Authorization
 │   └── ...
-├── frontend/       # Vite + React.js + TypeScript Template App
+├── frontend/       # Vite + React.js + TailwindCSS + TypeScript Template App
 │   └── ...
 ├── README.md       # README.md with steps to setup .env & prerequite details
 ```
